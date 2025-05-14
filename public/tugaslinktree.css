@@ -1,0 +1,140 @@
+/* styles.css */
+* {
+    margin-top: 100px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Crimson Text", serif;
+}
+
+body {
+    margin-top: 100px;
+    background-color: #fef5cc;
+    /* Light yellow background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: "Crimson Text", serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .accordion-button {
+        font-size: 14px;
+    }
+
+    .arrow-icon {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+.btn {
+    background-color: #ebf3e4;
+    color: #000;
+    /* black text */
+    width: 500px;
+    /* wider button */
+    height: 75px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 50px;
+    /* pill shape */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fef5cc;
+    /* light green hover */
+    color: #ebf3e4;
+    /* slightly darker text on hover */
+}
+
+.fa {
+    font-size: 30px;
+    color: #000
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn:active {
+    background-color: #fef5cc;
+}

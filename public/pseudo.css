@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    grid: template rows 200px;
+    grid-template-columns: 100px 100px;
+}
+
+.item {
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#grid-item {
+    background-color: steelblue
+}
