@@ -30,7 +30,7 @@
       padding: 14px 28px;
       margin: 10px;
       border-radius: 10px;
-      width: 320px;
+      width: 320px;p
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       transition: all 0.2s ease-in-out;

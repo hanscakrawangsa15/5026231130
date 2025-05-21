@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
+
 
 Route::get('/', function () { ## / : published url, function : controller
     return view('Frontend');
@@ -40,3 +43,14 @@ Route::get('cobasaratoga', function () {
 Route::get('latihansoal', function () {
     return view('latihansoal');
 });
+
+Route::get('dosen', [Link::class,'index']);
+
+//Route Formulir
+Route::get('/formulir', [PegawaiController::class,'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class,'proses']);
+
+//Route Blog
+Route::get('blog', [BlogController::class,'home']);
+Route::get('blog/tentang', [BlogController::class,'tentang']);
+Route::get('blog/kontak', [BlogController::class,'kontak']);
