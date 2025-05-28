@@ -54,6 +54,7 @@
     <a href="pseudo-code">pseudo-code</a>
     <a href="index">ETS</a>
     <a href="blog">blog</a>
+    <a href="pegawai">pegawai</a>
   </div>
 </body>
 </html>

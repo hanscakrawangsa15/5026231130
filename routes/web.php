@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Pegawai2Controller;
 
 
 Route::get('/', function () { ## / : published url, function : controller
@@ -54,3 +55,11 @@ Route::post('/formulir/proses', [PegawaiController::class,'proses']);
 Route::get('blog', [BlogController::class,'home']);
 Route::get('blog/tentang', [BlogController::class,'tentang']);
 Route::get('blog/kontak', [BlogController::class,'kontak']);
+
+//Route CRUD
+Route::get('/pegawai', [PegawaiController::class,'index']);
+Route::get('/pegawai/tambah', [PegawaiController::class,'tambah']);
+Route::post('/pegawai/store', [PegawaiController::class,'store']);
+Route::get('/pegawai/edit/{id}', [PegawaiController::class,'edit']);
+Route::post('/pegawai/update', [PegawaiController::class,'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class,'hapus']);
