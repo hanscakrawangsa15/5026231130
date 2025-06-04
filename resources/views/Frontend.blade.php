@@ -51,10 +51,10 @@
     <a href="cssgrid">cssgrid</a>
     <a href="tugaslinktree">tugaslinktree</a>
     <a href="pertemuan7">pertemuan7</a>
-    <a href="pseudo-code">pseudo-code</a>
+    <a href="pseudo-code">Pseudo-code</a>
     <a href="index">ETS</a>
-    <a href="blog">blog</a>
-    <a href="pegawai">pegawai</a>
+    <a href="blog">Blog</a>
+    <a href="index2">Pegawai</a>
   </div>
 </body>
 </html>

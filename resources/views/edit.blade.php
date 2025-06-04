@@ -8,13 +8,13 @@
 	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Edit Pegawai</h3>
  
-	<a href="/pegawai"> Kembali</a>
+	<a href="/index2"> Kembali</a>
 	
 	<br/>
 	<br/>
  
 	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
+	<form action="/index2/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
 		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>

@@ -11,10 +11,9 @@ class PegawaiController extends Controller
 	public function index()
 	{
     	// mengambil data dari table pegawai
-		$pegawai = DB::table('pegawai')->get();
- 
+		$pegawai = DB::table('pegawai')->paginate(10);
     	// mengirim data pegawai ke view index
-		return view('pegawai',['pegawai' => $pegawai]);
+		return view('index2',['pegawai' => $pegawai]);
  
 	}
  
@@ -38,7 +37,7 @@ class PegawaiController extends Controller
 			'pegawai_alamat' => $request->alamat
 		]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/pegawai');
+		return redirect('/index2');
  
 	}
  
@@ -48,7 +47,7 @@ class PegawaiController extends Controller
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('edit',['pegawai' => $pegawai]);
+		return view('edit',['index2' => $pegawai]);
  
 	}
  
@@ -63,7 +62,7 @@ class PegawaiController extends Controller
 			'pegawai_alamat' => $request->alamat
 		]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/pegawai');
+		return redirect('/index2');
 	}
  
 	// method untuk hapus data pegawai
@@ -73,6 +72,20 @@ class PegawaiController extends Controller
 		DB::table('pegawai')->where('pegawai_id',$id)->delete();
 		
 		// alihkan halaman ke halaman pegawai
-		return redirect('/pegawai');
+		return redirect('/index2');
+	}
+	public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$pegawai = DB::table('pegawai')
+		->where('pegawai_nama','like' /*Seperti*/,"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('index2',['pegawai' => $pegawai, 'cari' => $cari]);
+ 
 	}
 }

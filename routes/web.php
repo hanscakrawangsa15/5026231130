@@ -57,9 +57,10 @@ Route::get('blog/tentang', [BlogController::class,'tentang']);
 Route::get('blog/kontak', [BlogController::class,'kontak']);
 
 //Route CRUD
-Route::get('/pegawai', [PegawaiController::class,'index']);
-Route::get('/pegawai/tambah', [PegawaiController::class,'tambah']);
-Route::post('/pegawai/store', [PegawaiController::class,'store']);
-Route::get('/pegawai/edit/{id}', [PegawaiController::class,'edit']);
-Route::post('/pegawai/update', [PegawaiController::class,'update']);
-Route::get('/pegawai/hapus/{id}', [PegawaiController::class,'hapus']);
+Route::get('/index2', [PegawaiController::class,'index']);
+Route::get('/index2/tambah', [PegawaiController::class,'tambah']);
+Route::post('/index2/store', [PegawaiController::class,'store']);
+Route::get('/index2/edit/{id}', [PegawaiController::class,'edit']);
+Route::post('/index2/update', [PegawaiController::class,'update']);
+Route::get('/index2/hapus/{id}', [PegawaiController::class,'hapus']);
+Route::get('/index2/cari', [PegawaiController::class,'cari']);
