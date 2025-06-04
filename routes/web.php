@@ -5,6 +5,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Pegawai2Controller;
+use App\Http\Controllers\TrukController;
 
 
 Route::get('/', function () { ## / : published url, function : controller
@@ -64,3 +65,12 @@ Route::get('/index2/edit/{id}', [PegawaiController::class,'edit']);
 Route::post('/index2/update', [PegawaiController::class,'update']);
 Route::get('/index2/hapus/{id}', [PegawaiController::class,'hapus']);
 Route::get('/index2/cari', [PegawaiController::class,'cari']);
+
+//Route CRUD Truk
+Route::get('truk', [TrukController::class,'index']);
+Route::get('truk/tambah', [TrukController::class,'tambah']);
+Route::post('truk/store', [TrukController::class,'store']);
+Route::get('truk/edit/{id}', [TrukController::class,'edit']);
+Route::post('truk/update', [TrukController::class,'update']);
+Route::get('truk/hapus/{id}', [TrukController::class,'hapus']);
+Route::get('truk/cari', [TrukController::class,'cari']);

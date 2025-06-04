@@ -33,7 +33,7 @@
                 <a class="nav-link" href="/index2">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/truk">Truk</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>
