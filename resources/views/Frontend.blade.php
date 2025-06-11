@@ -55,6 +55,8 @@
     <a href="index">ETS</a>
     <a href="blog">Blog</a>
     <a href="index2">Pegawai</a>
+    <a href="truk">Truk</a>
+    <a href="karyawan">Karyawan</a>
   </div>
 </body>
 </html>

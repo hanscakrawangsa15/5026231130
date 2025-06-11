@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\TrukController;
+use App\Http\Controllers\KaryawanController;
 
 
 Route::get('/', function () { ## / : published url, function : controller
@@ -74,3 +75,13 @@ Route::get('truk/edit/{id}', [TrukController::class,'edit']);
 Route::post('truk/update', [TrukController::class,'update']);
 Route::get('truk/hapus/{id}', [TrukController::class,'hapus']);
 Route::get('truk/cari', [TrukController::class,'cari']);
+
+
+//Route CRUD Karyawan
+Route::get('karyawan', [KaryawanController::class,'index']);
+Route::get('karyawan/tambah', [KaryawanController::class,'tambah']);
+Route::post('karyawan/store', [KaryawanController::class,'store']);
+Route::get('karyawan/edit/{id}', [KaryawanController::class,'edit']);
+Route::post('karyawan/update', [KaryawanController::class,'update']);
+Route::get('karyawan/hapus/{id}', [KaryawanController::class,'hapus']);
+Route::get('karyawan/cari', [KaryawanController::class,'cari']);

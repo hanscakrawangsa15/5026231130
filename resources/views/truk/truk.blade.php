@@ -23,7 +23,7 @@
                 <tr>
                     <th>Merk</th>
                     <th>Harga</th>
-                    <th>Status</th>
+                    <th>Tersedia</th>
                     <th>Berat (kg)</th>
                     <th>Aksi</th>
                 </tr>
